@@ -1,0 +1,12 @@
+{% block title %} hello {% endblock %}
+
+{% block content %}
+    
+	{% if name == 'admin' %}
+        <p>Sorry...</p>
+    {% endif %}
+    
+    <h3>Hello {{ name|upper }}</h3>
+    
+{% endblock %}
+    
