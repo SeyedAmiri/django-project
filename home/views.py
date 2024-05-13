@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from .models import Todo
 from django.contrib import messages
+from .forms import TodoCreateForm
 
 # def hello(request):
 #     return HttpResponse("Hello User...")
@@ -29,4 +30,5 @@ def delete(request, todo_id):
 
 
 def create(request):
-    return render(request, 'create.html')
+    form = TodoCreateForm()
+    return render(request, 'create.html', context={'form': form})
