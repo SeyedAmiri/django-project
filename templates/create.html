@@ -2,8 +2,9 @@
 
 {% block content %}
 	<h3> Create ToDo </h3>
-    <form>
-        {{ form }}
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
         <input type="submit" value="create">
     </form>
 {% endblock %}
